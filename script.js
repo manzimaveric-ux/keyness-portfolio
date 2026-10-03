@@ -1,56 +1,71 @@
+// ===============================
 // MOBILE MENU
+// ===============================
 
-function toggleMenu() {
-    const nav = document.getElementById("navMenu");
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
 
-    nav.classList.toggle("active");
+if (menuBtn && navLinks) {
+    menuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
 }
 
 
-// CLOSE MOBILE MENU WHEN LINK IS CLICKED
+// ===============================
+// DARK / LIGHT MODE
+// ===============================
 
-document.querySelectorAll("#navMenu a").forEach(function(link) {
+function toggleTheme() {
+    document.body.classList.toggle("light-mode");
 
-    link.addEventListener("click", function() {
+    const themeBtn = document.querySelector(".theme-btn");
 
-        document
-            .getElementById("navMenu")
-            .classList.remove("active");
+    if (document.body.classList.contains("light-mode")) {
+        if (themeBtn) {
+            themeBtn.textContent = "☀️";
+        }
 
-    });
+        localStorage.setItem("theme", "light");
+    } else {
+        if (themeBtn) {
+            themeBtn.textContent = "🌙";
+        }
 
+        localStorage.setItem("theme", "dark");
+    }
+}
+
+
+// ===============================
+// LOAD SAVED THEME
+// ===============================
+
+window.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme");
+    const themeBtn = document.querySelector(".theme-btn");
+
+    if (savedTheme === "light") {
+        document.body.classList.add("light-mode");
+
+        if (themeBtn) {
+            themeBtn.textContent = "☀️";
+        }
+    } else {
+        document.body.classList.remove("light-mode");
+
+        if (themeBtn) {
+            themeBtn.textContent = "🌙";
+        }
+    }
 });
 
 
-// DARK / LIGHT MODE
-
-function toggleTheme() {
-
-    document.body.classList.toggle("light");
-
-    if (document.body.classList.contains("light")) {
-
-        localStorage.setItem("theme", "light");
-
-    } else {
-
-        localStorage.setItem("theme", "dark");
-
-    }
-
-}
-
-
-// REMEMBER THEME
-
-if (localStorage.getItem("theme") === "light") {
-    document.body.classList.add("light");
-}
-
-
+// ===============================
 // TYPING EFFECT
+// ===============================
 
-const typingText = document.getElementById("typingText");
+const typingText = document.querySelector(".typing-text");
 
 const words = [
     "Student & Future Developer",
@@ -61,26 +76,27 @@ const words = [
 ];
 
 let wordIndex = 0;
-let letterIndex = 0;
+let charIndex = 0;
 let deleting = false;
 
+function typeEffect() {
 
-function typingEffect() {
+    if (!typingText) return;
 
     const currentWord = words[wordIndex];
 
     if (!deleting) {
 
         typingText.textContent =
-            currentWord.substring(0, letterIndex + 1);
+            currentWord.substring(0, charIndex + 1);
 
-        letterIndex++;
+        charIndex++;
 
-        if (letterIndex === currentWord.length) {
+        if (charIndex === currentWord.length) {
 
             deleting = true;
 
-            setTimeout(typingEffect, 1500);
+            setTimeout(typeEffect, 1500);
 
             return;
         }
@@ -88,95 +104,95 @@ function typingEffect() {
     } else {
 
         typingText.textContent =
-            currentWord.substring(0, letterIndex - 1);
+            currentWord.substring(0, charIndex - 1);
 
-        letterIndex--;
+        charIndex--;
 
-        if (letterIndex === 0) {
+        if (charIndex === 0) {
 
             deleting = false;
 
-            wordIndex++;
-
-            if (wordIndex >= words.length) {
-                wordIndex = 0;
-            }
-
+            wordIndex =
+                (wordIndex + 1) % words.length;
         }
-
     }
 
     setTimeout(
-        typingEffect,
-        deleting ? 50 : 90
+        typeEffect,
+        deleting ? 50 : 100
     );
 }
 
-
-typingEffect();
-
-
-// PROJECT MESSAGE
-
-function showProjectMessage() {
-
-    alert(
-        "This project is part of my technology and development journey."
-    );
-
-}
+typeEffect();
 
 
-// CONTACT FORM
+// ===============================
+// PROJECT BUTTONS
+// ===============================
 
-const contactForm =
-    document.getElementById("contactForm");
+const projectButtons =
+    document.querySelectorAll(".project-btn");
 
-contactForm.addEventListener("submit", function(event) {
+projectButtons.forEach(button => {
 
-    event.preventDefault();
+    button.addEventListener("click", () => {
 
-    alert(
-        "Thank you! Your message has been received."
-    );
+        alert("Project coming soon!");
 
-    contactForm.reset();
+    });
 
 });
 
 
+// ===============================
 // CURRENT YEAR
+// ===============================
 
-document.getElementById("year").textContent =
-    new Date().getFullYear();
+const yearElement =
+    document.getElementById("year");
+
+if (yearElement) {
+
+    yearElement.textContent =
+        new Date().getFullYear();
+
+}
 
 
+// ===============================
 // BACK TO TOP
+// ===============================
 
 const topButton =
-    document.getElementById("topButton");
+    document.getElementById("topBtn");
+
+if (topButton) {
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 300) {
+
+            topButton.classList.add("show");
+
+        } else {
+
+            topButton.classList.remove("show");
+
+        }
+
+    });
 
 
-window.addEventListener("scroll", function() {
+    topButton.addEventListener("click", () => {
 
-    if (window.scrollY > 400) {
+        window.scrollTo({
 
-        topButton.style.display = "block";
+            top: 0,
 
-    } else {
+            behavior: "smooth"
 
-        topButton.style.display = "none";
+        });
 
-    }
-
-});
-
-
-function scrollToTop() {
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
     });
 
 }
