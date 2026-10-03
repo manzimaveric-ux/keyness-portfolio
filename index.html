@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Iradukunda Manzi Keyness | Portfolio</title>
+
+    <meta name="description"
+        content="Official portfolio of Iradukunda Manzi Keyness - student, technology enthusiast and future developer.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <div class="nav-container">
+
+            <div class="logo">
+                KEYNESS<span>.</span>
+            </div>
+
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+            <nav id="navMenu">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#education">Education</a>
+                <a href="#goals">Goals</a>
+                <a href="#cv">CV</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <button class="theme-btn" onclick="toggleTheme()">🌙</button>
+
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <div class="profile-circle">
+                <img
+                    src="images/profile.jpg"
+                    alt="Iradukunda Manzi Keyness"
+                >
+            </div>
+
+            <p class="small-title">
+                WELCOME TO MY PORTFOLIO
+            </p>
+
+            <h1>
+                Hi, I'm <span>Keyness</span>
+            </h1>
+
+            <h2 id="typingText">
+                Student & Future Developer
+            </h2>
+
+            <p class="hero-text">
+                I am passionate about technology, creativity,
+                programming and building useful digital projects.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#projects" class="btn primary-btn">
+                    View My Projects
+                </a>
+
+                <a href="#contact" class="btn secondary-btn">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+
+        <div class="section-title">
+            <p>GET TO KNOW ME</p>
+            <h2>About Me</h2>
+        </div>
+
+        <div class="about-card">
+
+            <h3>Who I Am</h3>
+
+            <p>
+                My name is <strong>Iradukunda Manzi Keyness</strong>.
+                I am a student interested in technology, computers,
+                web development and artificial intelligence.
+            </p>
+
+            <p>
+                I enjoy learning how websites and digital systems work
+                and I am working toward becoming a skilled developer.
+            </p>
+
+            <p>
+                My goal is to use technology to create useful solutions
+                that can help people and make everyday activities easier.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+
+        <div class="section-title">
+            <p>WHAT I AM LEARNING</p>
+            <h2>My Skills</h2>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="card-icon">💻</div>
+                <h3>Web Development</h3>
+                <p>
+                    Learning HTML, CSS and JavaScript to build
+                    modern websites.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🤖</div>
+                <h3>Artificial Intelligence</h3>
+                <p>
+                    Interested in AI and learning how intelligent
+                    computer systems work.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🎨</div>
+                <h3>Creative Design</h3>
+                <p>
+                    Creating attractive interfaces and digital
+                    experiences.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🚀</div>
+                <h3>Problem Solving</h3>
+                <p>
+                    Enjoy finding creative solutions to technology
+                    problems.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+
+        <div class="section-title">
+            <p>WHAT I AM BUILDING</p>
+            <h2>My Projects</h2>
+        </div>
+
+        <div class="cards">
+
+            <div class="card project-card">
+
+                <div class="project-icon">🔎</div>
+
+                <h3>Keyness Search Engine</h3>
+
+                <p>
+                    A search engine website project designed to
+                    provide users with a simple way to search online.
+                </p>
+
+                <button onclick="showProjectMessage()">
+                    Learn More
+                </button>
+
+            </div>
+
+
+            <div class="card project-card">
+
+                <div class="project-icon">🤖</div>
+
+                <h3>Keyness AI</h3>
+
+                <p>
+                    A future artificial intelligence project designed
+                    to provide useful answers and assistance.
+                </p>
+
+                <button onclick="showProjectMessage()">
+                    Coming Soon
+                </button>
+
+            </div>
+
+
+            <div class="card project-card">
+
+                <div class="project-icon">🌐</div>
+
+                <h3>Personal Portfolio</h3>
+
+                <p>
+                    My personal online portfolio where I present
+                    my skills, projects and goals.
+                </p>
+
+                <button onclick="showProjectMessage()">
+                    This Website
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+
+        <div class="section-title">
+            <p>MY LEARNING JOURNEY</p>
+            <h2>Education</h2>
+        </div>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <h3>Secondary Education</h3>
+
+                    <p>
+                        Developing knowledge in science, mathematics,
+                        technology and other important subjects.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <h3>Technology Learning</h3>
+
+                    <p>
+                        Learning programming, website development,
+                        computer technology and digital tools.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <h3>Future Education</h3>
+
+                    <p>
+                        Planning to continue developing my skills
+                        in software development, technology and AI.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GOALS -->
+    <section id="goals" class="section">
+
+        <div class="section-title">
+            <p>MY FUTURE</p>
+            <h2>My Goals</h2>
+        </div>
+
+        <div class="goals-container">
+
+            <div class="goal">
+                <span>01</span>
+                <h3>Become a Developer</h3>
+                <p>
+                    Build strong programming and software development
+                    skills.
+                </p>
+            </div>
+
+            <div class="goal">
+                <span>02</span>
+                <h3>Build AI Technology</h3>
+                <p>
+                    Learn artificial intelligence and create useful
+                    AI-powered systems.
+                </p>
+            </div>
+
+            <div class="goal">
+                <span>03</span>
+                <h3>Create Useful Websites</h3>
+                <p>
+                    Build websites and digital platforms that solve
+                    real problems.
+                </p>
+            </div>
+
+            <div class="goal">
+                <span>04</span>
+                <h3>Keep Learning</h3>
+                <p>
+                    Continue improving my knowledge and technical skills.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CV + SOCIAL MEDIA -->
+    <section id="cv" class="section cv-section">
+
+        <div class="section-title">
+            <p>MY PROFESSIONAL PROFILE</p>
+            <h2>CV & Social Media</h2>
+        </div>
+
+
+        <div class="cv-container">
+
+            <!-- CV -->
+            <div class="cv-card">
+
+                <div class="big-icon">📄</div>
+
+                <h3>
+                    My Curriculum Vitae
+                </h3>
+
+                <p>
+                    Download my CV to learn more about my education,
+                    skills, experience and goals.
+                </p>
+
+                <a
+                    href="./cv.docx"
+                    download="Iradukunda-Manzi-Keyness-CV.docx"
+                    class="btn primary-btn download-cv"
+                >
+                    ⬇ Download My CV
+                </a>
+
+                <p class="file-info">
+                    Microsoft Word Document (.docx)
+                </p>
+
+            </div>
+
+
+            <!-- SOCIAL MEDIA -->
+            <div class="social-card">
+
+                <div class="big-icon">🔗</div>
+
+                <h3>
+                    Connect With Me
+                </h3>
+
+                <p>
+                    Follow my journey and connect with me online.
+                </p>
+
+                <div class="social-buttons">
+
+                    <!-- INSTAGRAM -->
+                    <a
+                        href="https://www.instagram.com/_ma.n.zi_/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social"
+                    >
+                        📷 Instagram
+                        <span>@_ma.n.zi_</span>
+                    </a>
+
+
+                    <!-- GITHUB -->
+                    <a
+                        href="https://github.com/manzimaveric-ux"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social"
+                    >
+                        💻 GitHub
+                        <span>manzimaveric-ux</span>
+                    </a>
+
+
+                    <!-- WHATSAPP -->
+                    <a
+                        href="https://wa.me/250781808568"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social"
+                    >
+                        💬 WhatsApp
+                        <span>0781808568</span>
+                    </a>
+
+
+                    <!-- EMAIL -->
+                    <a
+                        href="mailto:manzimaveric@gmail.com"
+                        class="social"
+                    >
+                        📧 Email
+                        <span>manzimaveric@gmail.com</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+
+        <div class="section-title">
+            <p>GET IN TOUCH</p>
+            <h2>Contact Me</h2>
+        </div>
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+
+                <h3>Let's Connect</h3>
+
+                <p>
+                    You can contact me directly using any of the
+                    options below.
+                </p>
+
+
+                <!-- EMAIL -->
+                <a
+                    href="mailto:manzimaveric@gmail.com"
+                    class="contact-item contact-link"
+                >
+                    📧
+                    <span>
+                        manzimaveric@gmail.com
+                    </span>
+                </a>
+
+
+                <!-- WHATSAPP -->
+                <a
+                    href="https://wa.me/250781808568"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-item contact-link"
+                >
+                    💬
+                    <span>
+                        WhatsApp: 0781808568
+                    </span>
+                </a>
+
+
+                <!-- INSTAGRAM -->
+                <a
+                    href="https://www.instagram.com/_ma.n.zi_/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-item contact-link"
+                >
+                    📷
+                    <span>
+                        Instagram: @_ma.n.zi_
+                    </span>
+                </a>
+
+
+                <!-- GITHUB -->
+                <a
+                    href="https://github.com/manzimaveric-ux"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-item contact-link"
+                >
+                    💻
+                    <span>
+                        GitHub: manzimaveric-ux
+                    </span>
+                </a>
+
+            </div>
+
+
+            <!-- CONTACT FORM -->
+            <form id="contactForm">
+
+                <input
+                    type="text"
+                    placeholder="Your Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    placeholder="Your Email"
+                    required
+                >
+
+                <textarea
+                    rows="6"
+                    placeholder="Your Message"
+                    required
+                ></textarea>
+
+                <button
+                    type="submit"
+                    class="btn primary-btn"
+                >
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-content">
+
+            <h2>
+                KEYNESS<span>.</span>
+            </h2>
+
+            <p>
+                Student • Developer • Technology Enthusiast
+            </p>
+
+            <div class="footer-socials">
+
+                <a
+                    href="https://www.instagram.com/_ma.n.zi_/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Instagram
+                </a>
+
+                <a
+                    href="https://github.com/manzimaveric-ux"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub
+                </a>
+
+                <a
+                    href="https://wa.me/250781808568"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    WhatsApp
+                </a>
+
+                <a href="mailto:manzimaveric@gmail.com">
+                    Email
+                </a>
+
+            </div>
+
+            <p class="copyright">
+                © <span id="year"></span>
+                Iradukunda Manzi Keyness. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- BACK TO TOP -->
+    <button
+        id="topButton"
+        onclick="scrollToTop()"
+    >
+        ↑
+    </button>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
